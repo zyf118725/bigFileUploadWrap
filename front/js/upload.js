@@ -27,7 +27,8 @@
     }
     const formData = new FormData();
     formData.append('file', _file);
-    formData.append('fileName', _file.name)
+    formData.append('filename', _file.name)
+    console.log('formData: ', formData);
     changeDisable(true);
     instance.post('/upload_single', formData).then(res => {
       console.log('res: ', res);

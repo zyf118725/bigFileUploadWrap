@@ -145,11 +145,15 @@ app.post('/upload_single_name', async (req, res) => {
             fields,
             files
         } = await multiparty_upload(req);
+        console.log('fields: ', fields);
+
         let file = (files.file && files.file[0]) || {},
             filename = (fields.filename && fields.filename[0]) || "",
             path = `${uploadDir}/${filename}`,
             isExists = false;
         // 检测是否存在
+        console.log('filename: ', filename);
+        console.log('path: ', path);
         isExists = await exists(path);
         if (isExists) {
             res.send({

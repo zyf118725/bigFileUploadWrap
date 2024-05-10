@@ -6,5 +6,4 @@
 后端：nodejs
 
 # 启动
-后端：cd bigfile-serve
-然后： node serve.js 
+后端：yarn serve

@@ -1,0 +1,13 @@
+{
+  "name": "bigfileupload",
+  "version": "1.0.0",
+  "description": "研究大文件上传技术",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "cd bigfile-serve && node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
