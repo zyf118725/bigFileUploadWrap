@@ -1,8 +1,27 @@
+.container {
+  padding: 20px 100px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.container .item h3 {
+  line-height: 40px;
+}
+
+.item {
+  flex: 1;
+  min-width: 400px;
+  margin-bottom: 30px;
+}
+
 .upload_box {
   position: relative;
   box-sizing: border-box;
   padding: 10px;
-  width: 400px;
+  /* width: 400px; */
+  width: 100%;
   min-height: 150px;
   border: 1px dashed #DDD;
 }
@@ -52,12 +71,12 @@
 }
 
 .upload_box .upload_button.select {
-background: linear-gradient(to bottom, #00BFFF, #1E90FF);
-border: none;
-color: white;
-font-size: 14px;
-border-radius: 4px;
-cursor: pointer;
+  background: linear-gradient(to bottom, #00BFFF, #1E90FF);
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .upload_box .upload_button.upload {
