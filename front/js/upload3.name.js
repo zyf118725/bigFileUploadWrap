@@ -1,4 +1,4 @@
-// 缩略图，自动生成唯一名
+// 缩略图，自动命名
 (function () {
   let upload = document.querySelector('#upload3'),
     upload_inp = upload.querySelector('.upload_inp'),
