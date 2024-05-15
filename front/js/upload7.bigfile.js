@@ -13,13 +13,21 @@
     if (!file) return;
     upload_button_select.classList.add('loading');
     upload_progress.style.display = 'block';
+    console.time()
     const { HASH, suffix } = await changeToBuffer(file);
+    console.log('文件转化时间：');
+    console.timeEnd()
+
     // 获取已上传的切片列表
     const already = await getAlreadySlice(HASH);
     console.log('already: ', already);
     // 获取切片
+    console.time()
     const chunks = getChunks(file, HASH, suffix);
-    console.log('chunks: ', chunks);
+    console.log('切片时长: ');
+    console.timeEnd()
+
+    // console.log('chunks: ', chunks);
     // 总切片数
     const count = chunks.length;
     let curIndex = 0; // 已上传切片数
@@ -35,13 +43,11 @@
       formData.append('file', item.file);
       formData.append('filename', item.filename);
       instance.post('/upload_chunk', formData).then(res => {
-        console.log('res: ', res);
+        // console.log('res: ', res);
         if (+res.code === 0) {
-          console.log('处理切片上传成功');
           complate();
           return
         }
-        console.log('处理切片上传成功11111');
         return Promise.reject('error');
       }).catch(err => {
         console.log('文件上传失败，请稍后再试');
@@ -53,10 +59,9 @@
     // 处理切片上传成功
     function complate() {
       curIndex++;
-      console.log('curIndex: ', curIndex);
       // 处理进度条
       const progress = (curIndex / count) * 100 + '%';
-      console.log('progress: ', progress);
+      // console.log('上传进度-progress: ', progress);
       upload_progress_value.style.width = progress;
       // 合并切片
       if (curIndex < count) return;
@@ -117,15 +122,17 @@
       count = 100;
     }
     let index = 0;
+    console.time();
     const chunks = [];
     while (index < count) {
-      console.log('index: ', index);
       chunks.push({
         file: file.slice(index * max, (index + 1) * max),
         filename: `${HASH}_${index + 1}.${suffix}`,
       });
       index++;
     }
+    console.timeEnd('');
+
     return chunks;
   }
 

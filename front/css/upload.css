@@ -11,9 +11,14 @@
 }
 
 .item {
+  /* display: none; */
   flex: 1;
   min-width: 400px;
   margin-bottom: 30px;
+}
+
+.item7 {
+  display: block;
 }
 
 .upload_box {
