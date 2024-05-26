@@ -17,7 +17,6 @@
     const { HASH, suffix } = await changeToBuffer(file);
     console.log('文件转化时间：');
     console.timeEnd()
-
     // 获取已上传的切片列表
     const already = await getAlreadySlice(HASH);
     console.log('already: ', already);
@@ -132,7 +131,6 @@
       index++;
     }
     console.timeEnd('');
-
     return chunks;
   }
 

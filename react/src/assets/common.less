@@ -1,0 +1,260 @@
+/* 重置样式 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+}
+
+/* 样式的重置 */
+i,
+em {
+  font-style: normal
+}
+
+dt {
+  font-weight: normal
+}
+
+.page {
+  min-width: 1200px;
+  overflow: auto
+}
+
+.relative {
+  position: relative
+}
+
+.absolute {
+  position: absolute
+}
+
+ul,
+ol,
+li {
+  list-style: none
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+.w1080 {
+  width: 1080px;
+  margin: 0 auto
+}
+
+.flex {
+  display: flex
+}
+
+.font-light {
+  font-weight: 400
+}
+
+/* 字体颜色 */
+.color-333 {
+  color: #333
+}
+
+.color-666 {
+  color: #666
+}
+
+.color-999,
+.color-gray {
+  color: #999
+}
+
+.color-white {
+  color: white
+}
+
+.color-red,
+.color-060 {
+  color: #ff6060
+}
+
+.color-red2 {
+  color: #ff5a23
+}
+
+.color-yellow {
+  color: #ff7f00
+}
+
+.color-green {
+  color: #00c062
+}
+
+.color-blue {
+  color: #1f84fa
+}
+
+/* 字号 */
+.font-size14 {
+  font-size: 14px
+}
+
+/* 背景色 */
+.bg-pink {
+  background: pink
+}
+
+.bg-yellow {
+  background: #f8f5ef
+}
+
+.bg-blue {
+  background: blue
+}
+
+.bg-green {
+  background: greenyellow
+}
+
+.bg-black {
+  background: #181818
+}
+
+.bg-gray {
+  background: #f7f7f7
+}
+
+.bg-white {
+  background: #fff
+}
+
+.bg-container {
+  background: #f8f5ef
+}
+
+.pointer {
+  cursor: pointer
+}
+
+/* 按钮 */
+// .btn {display: flex;font-size: 14px;box-sizing: border-box;align-items: center;justify-content: center;border-radius: 5px;cursor: pointer;height: 32px}
+// .btn-white, .btn-white:focus {background: #fff;border: 1px solid #999999;color: #575757}
+// .btn-white:hover {background: #fff;box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);color: #575757;border: 1px solid #999999}
+// .btn-black, .btn-black:focus {border: 1px solid #1a1a1a;background: #1a1a1a;color: #fff}
+// .btn-black:hover {background: #1a1a1a;color: #fff;opacity: 0.8;border: 1px solid #1a1a1a}
+// .btn-red, .btn-red:focus {border: 1px solid #ff5c5c;background: #ff5c5c;color: #fff}
+// .btn-red:hover {background: #ff5c5c;border: 1px solid #ff5c5c;color: #fff !important;opacity: 0.8}
+// .btn-yellow, .btn-yellow:focus, .ant-btn-primary, .ant-btn-primary:focus {background: #ff9300;border: 1px solid #ff9300;color: #fff;border-radius: 5px}
+// .btn-yellow:hover, .ant-btn-primary:hover {background: #ff9300;border: 1px solid #ff9300;color: #fff !important;box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2)}
+// .ant-btn[disabled], .ant-btn[disabled]:hover, .ant-btn[disabled]:focus, .ant-btn[disabled]:active {background: #999999;color: #fff}
+// .btn-yellow[disabled], .btn-yellow[disabled]:hover, .btn-yellow[disabled]:focus, .btn-yellow[disabled]:active, .ant-btn-primary[disabled], .ant-btn-primary[disabled]:hover, .ant-btn-primary[disabled]:focus, .ant-btn-primary[disabled]:active {border: 1px solid rgba(255, 147, 0, 0);background: rgba(255, 147, 0, 0.45)}
+// .ant-btn-default {border-radius: 5px}
+// .ant-btn-default:hover {color: #ff9300;border-color: #ff9300}
+
+/* 阴影 */
+.boxShadow {
+  box-shadow: 0 0 10px rgba(22, 22, 22, 0.1)
+}
+
+/* 居中 */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.center-h {
+  display: flex;
+  justify-content: center
+}
+
+.center-v {
+  display: flex;
+  align-items: center
+}
+
+/* flex 右对齐 */
+.flex-end {
+  display: flex;
+  justify-content: flex-end
+}
+
+/* flex 两边对齐 */
+.flex-between {
+  display: flex;
+  justify-content: space-between
+}
+
+/* flex 两边对齐垂直方向居中 */
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+/* 定位 */
+.relative {
+  position: relative
+}
+
+.absolute {
+  position: absolute
+}
+
+/* 省略号 */
+.ellipsis {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical
+}
+
+.ellipsis2 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical
+}
+
+.global_home .swiper-scrollbar {
+  left: 0 !important;
+  width: 100% !important;
+  cursor: pointer
+}
+
+/* 文字下划线 */
+.underline {
+  text-decoration: underline
+}
+
+/* 文字中划线 */
+.del-line,
+.line-through {
+  text-decoration: line-through
+}
+
+/* input type="number"时 去掉箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important
+}
+
+.circle {
+  border-radius: 100%
+}
+
+.ant-form-item-has-error .ant-input-status-error {
+  border-color: #f04134
+}
+
+/* 去掉谷歌记住密码  输入框有背景颜色 */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: transparent;
+  background-image: none;
+  transition: background-color 50000s ease-in-out 0s;
+}

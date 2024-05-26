@@ -320,9 +320,23 @@ app.get('/upload_already', async (req, res) => {
         });
     }
 });
-
+app.get('/test', async (req, res) => {
+    res.send('hello1');
+})
+app.get('/slowApi', async (req, res) => {
+    setTimeout(() => {
+        res.send({ code: 0, data: '我是慢Api' });
+    }, 2000)
+})
+app.post('/slowApiPost', async (req, res) => {
+    setTimeout(() => {
+        res.send({ code: 0, data: '我是慢Api的post版' });
+    }, 2000)
+})
 app.use(express.static('./'));
 app.use((req, res) => {
     res.status(404);
     res.send('NOT FOUND!');
 });
+
+
